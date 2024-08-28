@@ -7,6 +7,7 @@ docker compose up --build -d
 ```
 docker compose up -d
 ```
+http://localhost:3000/
 
 ### コンテナを止める
 ```

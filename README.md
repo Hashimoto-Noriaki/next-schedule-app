@@ -1,7 +1,11 @@
-### Docker起動
+### Dockerビルド
 ```
 docker compose up --build 
 docker compose up --build -d
+```
+### Docker起動
+```
+docker compose up -d
 ```
 
 ### コンテナを止める

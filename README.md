@@ -29,3 +29,7 @@ npm run format
 ```
 npm run storybook
 ```
+StoryBookお手本(SmartHR社)
+https://story.smarthr-ui.dev
+
+

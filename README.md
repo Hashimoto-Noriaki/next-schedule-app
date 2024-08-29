@@ -40,7 +40,12 @@ https://github.com/kufu/smarthr-ui?tab=readme-ov-file
 
 ```
 
-- ファイル構成２パターン
+- その他テスト
+1. vitest
+2. Testing Library
+
+- ファイル構成
+小規模プロジェクトや特定のコンポーネントに関連するテストをすぐに見つけやす利点があるので今回はこの構成を採用
 ```
 src/
   components/
@@ -49,6 +54,14 @@ src/
       PrimaryBtn.test.tsx
 ```
 
-
-
-
+大規模な場合だと以下の構成。コードとテストを分けるので、プロジェクトの構造が把握しやすくなる
+```
+src/
+  components/
+    atoms/
+      PrimaryBtn.tsx
+  tests/
+    components/
+      atoms/
+        PrimaryBtn.test.tsx
+```

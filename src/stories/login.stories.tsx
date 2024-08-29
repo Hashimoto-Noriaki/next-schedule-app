@@ -1,15 +1,14 @@
-import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
-import { Login } from '../pages/login';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Login } from "../pages/login";
 
 // Storybookのメタデータを定義
 const meta: Meta<typeof Login> = {
-  title: 'Pages/Login',
+  title: "Pages/Login",
   component: Login,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 };
 
 export default meta;

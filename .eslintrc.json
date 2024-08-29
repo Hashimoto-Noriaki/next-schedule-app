@@ -5,15 +5,11 @@
     "prettier",
     "plugin:storybook/recommended"
   ],
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "rules": {
     "no-console": "error",
     "@next/next/no-img-element": "off",
-    "prettier/prettier": [
-      "error"
-    ]
+    "prettier/prettier": ["error"]
   },
   "ignorePatterns": [
     "src/components/digital-agency/**/*",

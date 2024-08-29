@@ -1,29 +1,30 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { Button } from "./Button";
+import { fn } from "@storybook/test";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: "Example/Button",
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     backgroundColor: { control: "color" },
+    icon: {
+      control: {
+        type: "select",
+        options: ["plus", "minus"],
+      },
+    },
+    width: { control: "text" }, // 横幅をコントロールできるようにする
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
     primary: true,
@@ -48,5 +49,53 @@ export const Small: Story = {
   args: {
     size: "small",
     label: "Button",
+  },
+};
+
+// デフォルトの青色ボタン
+export const Default: Story = {
+  args: {
+    label: "Button",
+    primary: true,
+    backgroundColor: "blue",
+  },
+};
+
+// 青色のプラスボタン
+export const BluePlusButton: Story = {
+  args: {
+    label: "",
+    primary: true,
+    backgroundColor: "blue",
+    icon: "plus",
+  },
+};
+
+// 青色のマイナスボタン
+export const BlueMinusButton: Story = {
+  args: {
+    label: "",
+    primary: true,
+    backgroundColor: "blue",
+    icon: "minus",
+  },
+};
+
+// 赤色のボタン
+export const RedButton: Story = {
+  args: {
+    label: "削除",
+    primary: true,
+    backgroundColor: "red",
+  },
+};
+
+// 横幅が広い青いボタンのストーリー
+export const WideBlueButton: Story = {
+  args: {
+    label: "ボタン",
+    primary: true,
+    backgroundColor: "blue",
+    width: "200%",
   },
 };

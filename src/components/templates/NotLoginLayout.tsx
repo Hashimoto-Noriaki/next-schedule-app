@@ -24,3 +24,5 @@ export const NotLoginLayout = ({ children }: PropsType) => {
     </div>
   );
 };
+
+export default NotLoginLayout;

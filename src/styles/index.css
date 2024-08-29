@@ -5,12 +5,12 @@
 .logo {
   color          : #ffffff;
   text-shadow    : 
-      1px  1px 1px #3f6212,
-    -1px  1px 1px #3f6212,
-      1px -1px 1px #3f6212,
-    -1px -1px 1px #3f6212,
-      1px  0px 1px #3f6212,
-      0px  1px 1px #3f6212,
-    -1px  0px 1px #3f6212,
-      0px -1px 1px #3f6212;
+      1px  1px 1px #61DAFB,
+    -1px  1px 1px #61DAFB,
+      1px -1px 1px #61DAFB,
+    -1px -1px 1px #61DAFB,
+      1px  0px 1px #61DAFB,
+      0px  1px 1px #61DAFB,
+    -1px  0px 1px #61DAFB,
+      0px -1px 1px #61DAFB;
 }

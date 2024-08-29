@@ -1,6 +1,9 @@
+import { useRouter } from "next/router";
 import { PrimaryBtn } from "../components/atoms/PrimaryBtn";
 
 export const Login = () => {
+  const router = useRouter();
+
   return (
     <div className="w-[500px] bg-white rounded-lg shadow-lg py-10">
       <form className="flex flex-col justify-center items-center gap-10">
@@ -21,7 +24,13 @@ export const Login = () => {
             placeholder="password"
           />
         </div>
-        <PrimaryBtn>ログイン</PrimaryBtn>
+        <PrimaryBtn
+          onClick={() => {
+            router.push("/login");
+          }}
+        >
+          ログイン
+        </PrimaryBtn>
       </form>
     </div>
   );

@@ -29,7 +29,9 @@ npm run format
 ```
 npm run storybook
 ```
-StoryBookお手本(SmartHR社)
+- StoryBookお手本(SmartHR社)
+
 https://story.smarthr-ui.dev
+https://github.com/kufu/smarthr-ui?tab=readme-ov-file
 
 

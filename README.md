@@ -36,8 +36,7 @@ https://github.com/kufu/smarthr-ui?tab=readme-ov-file
 
 ### Jest（テスト）
 ```
-
-
+npx jest
 ```
 
 - その他テスト

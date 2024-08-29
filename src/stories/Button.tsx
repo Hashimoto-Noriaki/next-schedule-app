@@ -2,55 +2,40 @@ import React from "react";
 import "./button.css";
 
 export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
   primary?: boolean;
-  /**
-   * What background color to use
-   */
   backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
   size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
   label: string;
-  /**
-   * Optional click handler
-   */
+  icon?: "plus" | "minus";
   onClick?: () => void;
+  width?: string; // 横幅を指定するためのプロパティ
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const Button = ({
   primary = false,
   size = "medium",
   backgroundColor,
   label,
+  icon,
+  width = "auto", // 初期値を設定
   ...props
 }: ButtonProps) => {
   const mode = primary
     ? "storybook-button--primary"
     : "storybook-button--secondary";
+
   return (
     <button
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " ",
       )}
+      style={{ backgroundColor, width }} // ここで width に "100%" を指定可能
       {...props}
     >
+      {icon === "plus" && <span className="icon">＋</span>}
+      {icon === "minus" && <span className="icon">−</span>}
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
     </button>
   );
 };

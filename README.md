@@ -34,4 +34,21 @@ npm run storybook
 https://story.smarthr-ui.dev
 https://github.com/kufu/smarthr-ui?tab=readme-ov-file
 
+### Jest（テスト）
+```
+
+
+```
+
+- ファイル構成２パターン
+```
+src/
+  components/
+    atoms/
+      PrimaryBtn.tsx
+      PrimaryBtn.test.tsx
+```
+
+
+
 

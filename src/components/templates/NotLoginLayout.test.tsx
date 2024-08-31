@@ -6,8 +6,15 @@ import "@testing-library/jest-dom";
 // Mockの子コンポーネントを用意
 const MockChildComponent = () => <div>Child Component</div>;
 
-describe("NotLoginLayout Component", () => {
-  it("should render the header with the correct logo and navigation links", () => {
+// リンクの期待値を検証するためのヘルパー関数
+const checkLink = (text: RegExp, href: string) => {
+  const link = screen.getByText(text);
+  expect(link).toBeInTheDocument();
+  expect(link).toHaveAttribute("href", href);
+};
+
+describe("NotLoginLayout コンポーネント", () => {
+  it("ヘッダーが正しいロゴとナビゲーションリンクでレンダリングされるべき", () => {
     render(
       <NotLoginLayout>
         <MockChildComponent />
@@ -15,20 +22,16 @@ describe("NotLoginLayout Component", () => {
     );
 
     // ロゴのリンクが正しいか確認
-    const logoLink = screen.getByText(/スケジュール管理APP/i);
-    expect(logoLink).toBeInTheDocument();
-    expect(logoLink).toHaveAttribute("href", "/");
+    checkLink(/スケジュール管理APP/i, "/");
 
     // ナビゲーションリンクの確認
-    const loginLink = screen.getByText(/ログイン/i);
-    expect(loginLink).toBeInTheDocument();
-    expect(loginLink).toHaveAttribute("href", "/login");
+    checkLink(/ログイン/i, "/login");
 
     // 子コンポーネントが表示されているか確認
     expect(screen.getByText(/Child Component/i)).toBeInTheDocument();
   });
 
-  it("should render the main content area with child components", () => {
+  it("メインコンテンツ領域に子コンポーネントがレンダリングされるべき", () => {
     render(
       <NotLoginLayout>
         <MockChildComponent />

@@ -57,6 +57,9 @@
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
     "transform": {
       "^.+\\.tsx?$": "babel-jest"
     },

@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { useRouter } from "next/router";
-import Login from "./login"; // ファイル名が一致していることを確認
+import Login from "./login";
 
 // useRouter をモックする
 jest.mock("next/router", () => ({

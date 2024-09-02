@@ -1,6 +1,16 @@
-import "@/styles/globals.css";
+import "../styles/destyle.css";
+import "../styles/index.css";
+import "../styles/output.css";
+import NotLoginLayout from "../components/templates/NotLoginLayout";
+
 import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <NotLoginLayout>
+      <Component {...pageProps} />
+    </NotLoginLayout>
+  );
 }
+
+export default MyApp;

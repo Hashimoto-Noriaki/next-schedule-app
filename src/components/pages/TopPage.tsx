@@ -1,4 +1,4 @@
-
+import LoginButton  from "../atoms/LoginButton";
 
 export default function TopPage(){
     return(
@@ -23,7 +23,9 @@ export default function TopPage(){
                     <p className="pt-[30px] font-bold text-3xl">また、スケジュールをカレンダー形式で表示することができます。</p>
                 </div>
                 <div className="pt-[20vh]">
-                    <button className="bg-emerald-600 text-white font-bold text-lg  px-12 py-5 w-[400px] rounded-full shadow-lg  hover:bg-emerald-400 transition">ログイン</button>
+                    <LoginButton>
+                        ログイン
+                    </LoginButton>
                 </div>
             </main>
         </div>

@@ -2,8 +2,19 @@
 
 export default function TopPage(){
     return(
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="font-bold text-3xl text-sky-500 underline">Next.jsスタート</h1>
+        <div>
+            <header className="leading-[60px]">
+                <div className="container mx-auto flex justify-between">
+                    <h1>スケジュール管理App</h1>
+                    <nav>
+                        <ul className="flex gap-10">
+                            <li>利用説明</li>
+                            <li>新規登録</li>
+                            <li>ログイン</li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
         </div>
     )
 }
